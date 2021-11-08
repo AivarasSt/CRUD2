@@ -1,6 +1,6 @@
 const urlBase = 'http://localhost:3000';
 
-const getToy = (success, failure) => {
+const getToys = (success, failure) => {
   setTimeout(() => {
     fetch(urlBase + '/toy')
       .then(response => response.json())
@@ -9,7 +9,7 @@ const getToy = (success, failure) => {
   }, 1000)
 }
 
-const deleteToy = (success, failure, id) => {
+const deleteToys = (success, failure, id) => {
   fetch(urlBase + '/toy/' + id , { method: 'DELETE' })
   .then(response => response.json())
   .then(success)
@@ -18,20 +18,20 @@ const deleteToy = (success, failure, id) => {
 
 
 const API = {
-  getToy,
-  deleteToy
+  getToys,
+  deleteToys
 };
 
-API.getToy(
+API.getToys(
   (duomenys) => console.log(duomenys),
   (klaida) => console.error(klaida))
 
-// API.deleteToy(
+// API.deleteToys(
 //   (duomenys) => console.log(duomenys),
 //   (klaida) => console.error(klaida),
 //   "103")
 
-// API.getToy(
+// API.getToys(
 //   (duomenys) => console.log(duomenys),
 //   (klaida) => console.error(klaida))
   
