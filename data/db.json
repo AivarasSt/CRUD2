@@ -1,0 +1,53 @@
+{
+  "Toy": [
+    {
+      "id": "101",
+      "title": "Robotas",
+      "price": {
+        "currency": "$",
+        "amount": 15
+      },
+      "ageRestrictions": {
+        "from": 5
+      },
+      "discount": {
+        "type": "percentage",
+        "amount": 10
+      },
+      "imgSrc": "https://ae01.alicdn.com/kf/HTB1ALAoacrrK1RjSspaq6AREXXa8/Programmable-Robot-Toys-For-Kids-Boy-With-Intelligence-Diy-Remote-Control-Robot-Robotics-Kits-Programmer-Programmable.jpg_Q90.jpg_.webp"
+    },
+    {
+      "id": "102",
+      "title": "Lėlė",
+      "price": {
+        "currency": "€",
+        "amount": 20
+      },
+      "ageRestrictions": {
+        "from": null
+      },
+      "discount": {
+        "type": "toFixed",
+        "amount": 6.66
+      },
+      "imgSrc": "https://i5.walmartimages.com/asr/f1103f1e-9afb-487c-86aa-725464768581_1.f473803d578912c0c26e53aeacf17f50.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+    },
+    {
+      "id": "103",
+      "title": "Meškinas",
+      "price": {
+        "currency": "€",
+        "amount": 10
+      },
+      "ageRestrictions": {
+        "from": 18
+      },
+      "discount": {
+        "type": "amount",
+        "amount": 2
+      },
+      "imgSrc": "https://sc04.alicdn.com/kf/H31f562a9ad134894b50aa9461ec2d9ece.jpg"
+    }
+
+  ]
+}
