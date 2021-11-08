@@ -1,0 +1,23 @@
+{
+  "name": "crud2",
+  "version": "1.0.0",
+  "description": "CRUD project #2",
+  "main": "index.js",
+  "scripts": {
+    "start-windows": "node_modules\\.bin\\json-server --watch data/db.json",
+    "start-unix": "node_modules/.bin/json-server --watch data/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AivarasSt/CRUD2.git"
+  },
+  "author": "Aivaras Stanaitis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AivarasSt/CRUD2/issues"
+  },
+  "homepage": "https://github.com/AivarasSt/CRUD2#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
