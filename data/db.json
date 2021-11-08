@@ -1,5 +1,5 @@
 {
-  "Toy": [
+  "toy": [
     {
       "id": "101",
       "title": "Robotas",
@@ -23,9 +23,7 @@
         "currency": "€",
         "amount": 20
       },
-      "ageRestrictions": {
-        "from": null
-      },
+      "ageRestrictions": null,
       "discount": {
         "type": "toFixed",
         "amount": 6.66
