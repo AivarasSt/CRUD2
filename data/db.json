@@ -45,6 +45,51 @@
         "amount": 2
       },
       "imgSrc": "https://sc04.alicdn.com/kf/H31f562a9ad134894b50aa9461ec2d9ece.jpg"
+    },
+    {
+      "id": "104",
+      "title": "Lėktuvas",
+      "price": {
+        "currency": "€",
+        "amount": 13
+      },
+      "ageRestrictions": {
+        "from": 3
+      },
+      "discount": {
+        "type": "percentage",
+        "amount": 10
+      },
+      "imgSrc": "https://m.media-amazon.com/images/I/61q1Cq1IYCL._AC_SX425_.jpg"
+    },
+    {
+      "id": "105",
+      "title": "Šautuvas",
+      "price": {
+        "currency": "€",
+        "amount": 10
+      },
+      "ageRestrictions": {
+        "from": 3
+      },
+      "discount": {
+        "type": "toFixed",
+        "amount": 8
+      },
+      "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/61YswYMPenL.jpg"
+    },
+    {
+      "id": "106",
+      "title": "Mašinėlė",
+      "price": {
+        "currency": "€",
+        "amount": 9.99
+      },
+      "ageRestrictions": {
+        "from": 3
+      },
+      "discount": null,
+      "imgSrc": "https://ae01.alicdn.com/kf/HTB1ZXoeLVXXXXbgXXXXq6xXFXXXg.jpg"
     }
   ]
 }

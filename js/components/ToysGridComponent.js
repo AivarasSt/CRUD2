@@ -21,7 +21,6 @@ class ToysGridComponent {
   showError = error => console.error(error);
 
   deleteToy = (id) => {
-    this.state.loading = true;
     this.render();
     API.deleteToys(
       this.fetchToys,
@@ -31,7 +30,8 @@ class ToysGridComponent {
   };
   
   init = () => {
-    this.fetchToys();
+    this.state.loading = true;
+    setTimeout(() => this.fetchToys(), 1000)
     this.htmlElement = document.createElement('div');
 
     this.render();

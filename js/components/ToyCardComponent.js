@@ -16,7 +16,7 @@ class ToyCardComponent {
 
     this.htmlElement.className = " col-lg-4";
     this.htmlElement.innerHTML = `
-        <div class="card position-relative">
+        <div class="card shadow position-relative">
           <div class="card-inner">
             <div class="d-flex justify-content-center p-3">
               <img src="${imgSrc}" style="height:200px">
@@ -49,20 +49,22 @@ class ToyCardComponent {
     if (discount) {
       switch (discount.type) {
         case 'percentage':
-          card.innerHTML += `<span id="discount" class="bg-danger fw-bold text-white position-absolute top-0 start-0 p-1">-${discount.amount}%</span>
-          <h3 id="price" class="card-title text-center text-danger price"><span class="text-muted h6"><s>${price.amount + price.currency}</s> </span>${(price.amount - (price.amount * discount.amount / 100)) + price.currency}</h3>`
+          card.innerHTML += `<h4><span class="badge bg-danger fw-bold text-white position-absolute top-0 start-0 p-1">-${discount.amount}%</span></h4>
+          <h3 id="price" class="card-title text-center text-danger price"><sup class="text-muted h6"><s>${price.amount + price.currency}</s> </sup>${(price.amount - (price.amount * discount.amount / 100)) + price.currency}</h3>`
           break
         case 'amount':
-          card.innerHTML += `<span id="discount" class="bg-danger fw-bold text-white position-absolute top-0 start-0 p-1">-${discount.amount}${price.currency}</span>
-          <h3 id="price" class="card-title text-center text-danger price"><span class="text-muted h6"><s>${price.amount + price.currency}</s> </span>${(price.amount -  discount.amount) + price.currency}</h3>`
+          card.innerHTML += `<h4><span class="badge bg-danger fw-bold text-white position-absolute top-0 start-0 p-1">-${discount.amount}${price.currency}</span></h4>
+          <h3 id="price" class="card-title text-center text-danger price"><sup class="text-muted h6"><s>${price.amount + price.currency}</s> </sup>${(price.amount -  discount.amount) + price.currency}</h3>`
           break
         case 'toFixed':
-          card.innerHTML += `<span id="discount" class="bg-warning fw-bold position-absolute top-0 start-0 p-1">Akcija</span>
-          <h3 id="price" class="card-title text-center text-danger price"><span class="text-muted h6"><s>${price.amount + price.currency}</s> </span>${discount.amount  + price.currency}</h3>`
+          card.innerHTML += `<h4><span class="badge bg-warning fw-bold position-absolute top-0 start-0 p-1">Akcija</span></h4>
+          <h3 id="price" class="card-title text-center text-danger price"><sup class="text-muted h6"><s>${price.amount + price.currency}</s> </sup>${discount.amount  + price.currency}</h3>`
           break
-        default:
+        default: 
           break
       }
+    } else {
+      card.innerHTML += `<h3 id="price" class="card-title text-center text-muted price">${price.amount + price.currency}</h3>`
     }
   }
 }

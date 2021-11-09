@@ -1,12 +1,10 @@
 const urlBase = 'http://localhost:3000';
 
 const getToys = (success, failure) => {
-  setTimeout(() => {
     fetch(urlBase + '/toy')
       .then(response => response.json())
       .then(success)
       .catch(failure);
-  }, 1000)
 }
 
 const deleteToys = (success, failure, id) => {
