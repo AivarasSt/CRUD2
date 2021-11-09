@@ -8,7 +8,7 @@
         "amount": 15
       },
       "ageRestrictions": {
-        "from": 5
+        "from": 3
       },
       "discount": {
         "type": "percentage",
