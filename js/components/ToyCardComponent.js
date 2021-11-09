@@ -6,11 +6,6 @@ class ToyCardComponent {
     this.init();
   }
 
-  getPrice = () => {
-    const { price, discount } = this.props.data;
-  }
-
-
   init = () => {
     const { id, title, price, ageRestrictions, discount, imgSrc } = this.props.data;
 
