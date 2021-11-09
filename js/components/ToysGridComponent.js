@@ -9,7 +9,7 @@ class ToysGridComponent {
 
   fetchToys = () => {
     this.state.loading = true;
-    API.getToys(this.saveToys, this.showError    );
+    API.getToys(this.saveToys, this.showError);
   }
 
   saveToys = (toys) => {
@@ -20,6 +20,16 @@ class ToysGridComponent {
 
   showError = error => console.error(error);
 
+  deleteToy = (id) => {
+    this.state.loading = true;
+    this.render();
+    API.deleteToys(
+      this.fetchToys,
+      this.showError,
+      id
+    );
+  };
+  
   init = () => {
     this.fetchToys();
     this.htmlElement = document.createElement('div');
@@ -37,6 +47,7 @@ class ToysGridComponent {
       this.state.toys.forEach((toys) => {
         const cardComponent = new ToyCardComponent({
           data: toys,
+          onDelete: this.deleteToy,
         });
         this.htmlElement.append(cardComponent.htmlElement);
       });

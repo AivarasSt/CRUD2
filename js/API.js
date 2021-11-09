@@ -16,7 +16,6 @@ const deleteToys = (success, failure, id) => {
   .catch(failure);
 }
 
-
 const API = {
   getToys,
   deleteToys

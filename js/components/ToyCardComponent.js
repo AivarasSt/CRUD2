@@ -17,14 +17,22 @@ class ToyCardComponent {
     this.htmlElement.className = " col-lg-4";
     this.htmlElement.innerHTML = `
         <div class="card position-relative">
-          <div class="d-flex justify-content-center p-3">
-            <img src="${imgSrc}" style="height:200px">
+          <div class="card-inner">
+            <div class="d-flex justify-content-center p-3">
+              <img src="${imgSrc}" style="height:200px">
+            </div>
+            <h4 class="card-title text-center">${title}</h4>
           </div>
-          <h4 class="card-title text-center">${title}</h4>
+          <div class="d-flex align-items-center justify-content-center">
+              <button class="btn btn-sm btn-secondary position-absolute bottom-0 end-0 m-2"><i class="bi bi-trash"></i></button>
+          </div>
         </div>
     `;
 
-    const card = this.htmlElement.querySelector(".card");
+    const delBtn = this.htmlElement.querySelector('.btn');
+    delBtn.addEventListener('click', () => this.props.onDelete(id));
+
+    const card = this.htmlElement.querySelector(".card-inner");
     if (ageRestrictions) {
       switch (ageRestrictions.from) {
         case 3:
